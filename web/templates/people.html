@@ -27,12 +27,17 @@
                 {% for person in people %}
                     <div class="col-md-4">
                         <h2>{{ person.first_name }}</h2>
-                        <p> Card for {{ person.first_name }} {{ person.last_name }}</p>
-                        <p><a class="btn btn-secondary" href="#" role="button">Age: {{ person.age }} &raquo;</a>
+                        <p>
+                            Card for {{ person.first_name }} {{ person.last_name }}.
+                            <br>
+                            Do they like candy? {{ person.likes_candy }}
+                        </p>
+                        <p>
+                            <a class="btn btn-secondary" href="#" role="button">Age: {{ person.age }} &raquo;</a>
                         </p>
                     </div>
                 {% endfor %}
-            </div>
-        </div> <!-- /container -->
+            </div> <!-- /container -->
+        </div>
     </main>
 {% endblock %}

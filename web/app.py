@@ -15,6 +15,7 @@ class Person(db.Model):
     first_name = db.Column(db.String(255), nullable=False)
     last_name = db.Column(db.String(255), nullable=False)
     age = db.Column(db.Integer(), nullable=True)
+    likes_candy = db.Column(db.Boolean(), nullable=False)
 
     def __str__(self):
         return f"<Person Id={self.id}, Name={' '.join([self.FirstName, self.LastName])}>"
