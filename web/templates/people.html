@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!doctype html>
+    <html lang="en">
+
+    <body>
+
+    <main role="main">
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-3">Hello, world!</h1>
+                <p>
+                    This is a simple demo showcasing a small flask app that displays people from a database.
+                    It uses Flywheel to make sure the database is up to date and happy by working with SQL migration
+                    files.
+                </p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Example row of columns -->
+            <div class="row">
+                {% for person in people %}
+                    <div class="col-md-4">
+                        <h2>{{ person.first_name }}</h2>
+                        <p> Card for {{ person.first_name }} {{ person.last_name }}</p>
+                        <p><a class="btn btn-secondary" href="#" role="button">Age: {{ person.age }} &raquo;</a>
+                        </p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div> <!-- /container -->
+    </main>
+{% endblock %}

@@ -1,0 +1,23 @@
+<!doctype html>
+<title>Flyway Demo</title>
+
+{% include "head.html" %}
+{% include "nav.html" %}
+
+<header>
+    {% block header %}{% endblock %}
+</header>
+
+<section class="content">
+
+    {% for message in get_flashed_messages() %}
+        <div class="flash">{{ message }}</div>
+    {% endfor %}
+
+    {#    This is where child templates insert their stuff and things.#}
+    {% block content %}{% endblock %}
+
+</section>
+
+{% include "footer.html" %}
+
